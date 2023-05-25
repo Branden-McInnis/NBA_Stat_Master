@@ -1,0 +1,19 @@
+NBA Results Summary
+Players with highest points and their teams:
+ LeBron James LAL
+
+Most aggressive players, their teams and their positions:
+ Rudy Gobert UTA C
+  
+
+Most valuable players and their teams:
+player team position
+
+Most promising players and their teams:
+ James Harden
+
+Teams that had the most number of penalty minutes:
+none
+
+Teams that had the most number of game winning goals:
+team
