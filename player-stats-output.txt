@@ -1,19 +1,13 @@
 NBA Results Summary
-Players with highest points and their teams:
- LeBron James LAL
 
-Most aggressive players, their teams and their positions:
- Rudy Gobert UTA C
-  
+Players with the highest amount of points and their team:
+ James Harden | HOU | 34.3
 
-Most valuable players and their teams:
-player team position
+Player with the highest amount of assists and their team:
+ LeBron James | LAL | 10.2
 
-Most promising players and their teams:
- James Harden
+Players with the highest amount of rebounds and their team:
+ Rudy Gobert | UTA | 13.5
 
-Teams that had the most number of penalty minutes:
-none
-
-Teams that had the most number of game winning goals:
-team
+Player with the highest amount of assists and their team:
+ James Harden | HOU | 1.8

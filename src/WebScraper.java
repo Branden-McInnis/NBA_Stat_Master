@@ -21,7 +21,7 @@ public class WebScraper {
             Element table = doc.selectFirst("table#totals_stats");
 
             // Open a FileWriter to write the stats to a .txt file
-            FileWriter writer = new FileWriter("player-stats.txt");
+            FileWriter writer = new FileWriter("raw-player-data.txt");
 
             // Find the table body and iterate over the rows
             Elements rows = table.select("tbody > tr");
@@ -42,8 +42,6 @@ public class WebScraper {
                 String gamesPlayed = row.selectFirst("td[data-stat='g']").text();
 
 
-
-                // Extract team information (example code)
                 Elements teamNameElements = row.select("td[data-stat='team_id'] > a");
                 String teamName = teamNameElements.isEmpty() ? "none" : teamNameElements.get(0).text();
 

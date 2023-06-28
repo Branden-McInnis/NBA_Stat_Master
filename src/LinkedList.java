@@ -56,22 +56,18 @@ public class LinkedList<T>
     }
 
     //returns the data at a given index
-    public T getAt(int index)
-    {
-        Node<T> curr = front;
-        if (index<0||index>=count)
-        {
-            System.out.println("Error. Index out of bounds");
+    public T getAt(int index) {
+        if (index < 0 || index >= count) {
+            System.out.println("Error: Index out of bounds");
             return null;
         }
-        else
-        {
 
-            for(int i=0; i<index; i++)
-                curr = curr.getNext();
-            return curr.getData();
+        Node<T> curr = front;
+        for (int i = 0; i < index; i++) {
+            curr = curr.getNext();
         }
 
+        return curr.getData();
     }
 
     //inserts an item at a given index

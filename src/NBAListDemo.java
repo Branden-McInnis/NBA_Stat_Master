@@ -16,10 +16,15 @@ public class NBAListDemo {
         System.out.println("Enter the filename to read from: ");
         String filename = k.nextLine();
 
+        LinkedList<PlayerRecord> playerRecordLinkedList = new LinkedList<>();
+
+
         File file = new File(filename);
         Scanner inputFile = new Scanner(file);
         inputFile.useDelimiter("<>");
-        NBAStats playerRecords = new NBAStats();
+
+
+
         String playerName;
         String Position;
         String teamName;
@@ -48,10 +53,11 @@ public class NBAListDemo {
 
 
             record = new PlayerRecord(playerName, Position, teamName, pointsScored, Assists, Rebounds, steals, gamesPlayed);
-            playerRecords.add(record);
+            playerRecordLinkedList.add(record);
 
 
         }
+        NBAStats stats = new NBAStats(playerRecordLinkedList);
 
         inputFile.close();
         try {
@@ -59,20 +65,15 @@ public class NBAListDemo {
             FileWriter myWriter = new FileWriter(answers);
             PrintWriter myPrinter = new PrintWriter(myWriter);
             myPrinter.println("NBA Results Summary");
-            myPrinter.println("Players with highest points and their teams:");
-            myPrinter.println(playerRecords.mostPoints());
-            myPrinter.println("\nMost aggressive players, their teams and their positions:");
-            myPrinter.println(playerRecords.mostPenaltyMinutes());
-            myPrinter.println("\nMost valuable players and their teams:");
-            myPrinter.println(playerRecords.mostGameWinningGoals());
-            myPrinter.println("\nMost promising players and their teams:");
-            myPrinter.println(playerRecords.mostShotsOnGoal());
-            myPrinter.println("\nTeams that had the most number of penalty minutes:");
-            myPrinter.println(playerRecords.teamMostPenalty());
-            myPrinter.println("\nTeams that had the most number of game winning goals:");
-            myPrinter.println(playerRecords.teamMostGoals());
+            myPrinter.println("\nPlayers with the highest amount of points and their team:");
+            myPrinter.println(stats.mostPointsScored());
+            myPrinter.println("\nPlayer with the highest amount of assists and their team:");
+            myPrinter.println(stats.mostAssists());
+            myPrinter.println("\nPlayers with the highest amount of rebounds and their team:");
+            myPrinter.println(stats.mostRebounds());
+            myPrinter.println("\nPlayer with the highest amount of assists and their team:");
+            myPrinter.println(stats.mostSteals());
             myPrinter.close();
-
         }
 
         catch (IOException e){
