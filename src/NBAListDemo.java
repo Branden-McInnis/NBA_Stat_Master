@@ -6,6 +6,7 @@
  */
 
 import java.io.*;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class NBAListDemo {
@@ -35,12 +36,13 @@ public class NBAListDemo {
         double fieldGoalPercentage;
         double freeThrowPercentage;
         double gamesPlayed;
-
         PlayerRecord record = null;
+        PlayerRecord prevPlayerRecord = null;
+
 
         while(inputFile.hasNext()){
-
             playerName = inputFile.next();
+
             Position = inputFile.next();
             teamName = inputFile.next();
             pointsScored = inputFile.nextDouble();
@@ -49,12 +51,21 @@ public class NBAListDemo {
             steals = inputFile.nextDouble();
             gamesPlayed = inputFile.nextDouble();
 
-            inputFile.nextLine();
+            if(prevPlayerRecord != null && prevPlayerRecord.getPlayerName().equals(playerName)) {
 
+                pointsScored += prevPlayerRecord.getPointsScored();
+                Assists += prevPlayerRecord.getAssists();
+                Rebounds += prevPlayerRecord.getRebounds();
+                steals += prevPlayerRecord.getSteals();
+                gamesPlayed += prevPlayerRecord.getGamesPlayed();
+
+            }
 
             record = new PlayerRecord(playerName, Position, teamName, pointsScored, Assists, Rebounds, steals, gamesPlayed);
             playerRecordLinkedList.add(record);
 
+            prevPlayerRecord = record;
+            inputFile.nextLine();
 
         }
         NBAStats stats = new NBAStats(playerRecordLinkedList);

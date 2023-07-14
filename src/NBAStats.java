@@ -46,7 +46,7 @@ public class NBAStats {
     }
 
     public String mostAssists(){
-        System.out.println(playerRecords.size());
+
         double mostAssists = 0.0;
         double gamesPlayed = 0.0;
         int index = 0;

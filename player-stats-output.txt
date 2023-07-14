@@ -1,13 +1,13 @@
 NBA Results Summary
 
 Players with the highest amount of points and their team:
- James Harden | HOU | 34.3
+ Andrew Wiggins | GSW | 21.8
 
 Player with the highest amount of assists and their team:
  LeBron James | LAL | 10.2
 
 Players with the highest amount of rebounds and their team:
- Rudy Gobert | UTA | 13.5
+ Andre Drummond | CLE | 15.2
 
 Player with the highest amount of assists and their team:
- James Harden | HOU | 1.8
+ Robert Covington | HOU | 1.6
